@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc1cxfs802qfu"]
+
+[ext_resource type="Script" uid="uid://cthnja6mi4f1g" path="res://scripts/play_area.gd" id="1_hk8fp"]
+[ext_resource type="PackedScene" uid="uid://bg3dn6f6cais7" path="res://scenes/gravity_center.tscn" id="1_i1jbm"]
+[ext_resource type="PackedScene" uid="uid://l0kuabm3eqei" path="res://scenes/item_carrier.tscn" id="2_hk8fp"]
+
+[node name="PlayArea" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hk8fp")
+
+[node name="GravityCenter" parent="." instance=ExtResource("1_i1jbm")]
+
+[node name="ItemCarrier" parent="." instance=ExtResource("2_hk8fp")]

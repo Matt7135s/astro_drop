@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4m81bhm76xct"]
+
+[ext_resource type="Script" uid="uid://s4suujs6c5w2" path="res://scripts/merge_item.gd" id="1_hc781"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hc781"]
+
+[node name="MergeItem" type="RigidBody2D" groups=["merge_items"]]
+contact_monitor = true
+max_contacts_reported = 12
+linear_damp_mode = 1
+linear_damp = 0.1
+script = ExtResource("1_hc781")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hc781")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

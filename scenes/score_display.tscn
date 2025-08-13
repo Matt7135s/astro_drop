@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://bli7pgx48hea7"]
+
+[ext_resource type="Script" uid="uid://b0w5485pod3k3" path="res://scripts/score_display.gd" id="1_uxkum"]
+[ext_resource type="LabelSettings" uid="uid://h35dmortkqy2" path="res://label_settings.tres" id="2_v1kem"]
+
+[node name="ScoreDisplay" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_uxkum")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 48.0
+offset_bottom = 58.0
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 25
+
+[node name="VSplit" type="VSplitContainer" parent="Margin"]
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="Margin/VSplit"]
+layout_mode = 2
+text = "Score:"
+label_settings = ExtResource("2_v1kem")
+
+[node name="ScoreValue" type="Label" parent="Margin/VSplit"]
+layout_mode = 2
+text = "0"
+label_settings = ExtResource("2_v1kem")
